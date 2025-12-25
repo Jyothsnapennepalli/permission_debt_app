@@ -1,0 +1,250 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* WRAPPER */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start; /* 🔑 allow vertical growth */
+  justify-content: center;
+  position: relative;
+  overflow-y: auto; /* 🔑 enables scrolling */
+  padding: 40px 0; /* 🔑 spacing top & bottom */
+}
+
+/* BACKGROUND ANIMATION */
+.animated-bg::before,
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(90px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.animated-bg::before {
+  background: rgba(59, 130, 246, 0.25);
+  top: -120px;
+  left: -120px;
+}
+
+.animated-bg::after {
+  background: rgba(99, 102, 241, 0.25);
+  bottom: -120px;
+  right: -120px;
+  animation-delay: 3s;
+}
+
+/* CARD */
+.app-container {
+  background: white;
+  padding: 48px 56px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* ENTRANCE ANIMATION */
+.fade-in {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* ICON */
+.header-icon {
+  color: #2563eb;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* TEXT */
+h1 {
+  margin: 8px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+/* BUTTONS */
+.google-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.google-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+.logout-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* AVATAR */
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
+  animation: pulse 2.5s infinite;
+}
+
+/* USER INFO */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* SUMMARY CARDS */
+.summary-card {
+  flex: 1;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.summary-card h3 {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.summary-card p {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+
+.summary-card.high {
+  background: #fee2e2;
+}
+
+.summary-card.medium {
+  background: #fef3c7;
+}
+
+/* TABLE */
+.permissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.permissions-table th {
+  background: #f1f5f9;
+  padding: 10px;
+  text-align: left;
+}
+
+.permissions-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-60px, 40px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 6px rgba(37,99,235,0.2); }
+  50% { box-shadow: 0 0 0 14px rgba(37,99,235,0.05); }
+  100% { box-shadow: 0 0 0 6px rgba(37,99,235,0.2); }
+}
+/* LOADING SPINNER */
+.loader-container {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #e5e7eb;
+  border-top: 5px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+strong {
+  color: #2563eb;
+}
