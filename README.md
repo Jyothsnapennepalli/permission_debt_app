@@ -3,9 +3,7 @@ Below is a **complete, copy-paste ready `README.md`** that covers **everything**
 
 You can **directly create a `README.md` file** in your repo and paste this.
 
----
 
-````md
 # 🔐 Permission Debt – Google Drive Access Risk Analyzer
 
 Permission Debt is a web-based security auditing tool that helps users identify **over-shared, risky, and outdated access permissions** in their Google Drive.  
