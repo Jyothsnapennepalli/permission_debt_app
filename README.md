@@ -5,19 +5,6 @@ It visualizes **permission decay** by analyzing who has access to files, what le
 
 ---
 
-## 👥 Team
-
-### Team Name: CodeSphere
-
-| Name | Role |
-|-----|-----|
-|P Jyothsna Sree| Full Stack Developer |
-| G Sadiya| Presentation Designer|
-| R Anusha | Demo video Creator |
-
-
----
-
 ## 🚨 Problem Statement
 
 Over time, Google Drive files accumulate **permission debt**:
